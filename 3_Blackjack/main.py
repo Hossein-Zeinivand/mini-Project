@@ -30,8 +30,6 @@ while to_play:
             dealer_hand.append(add_card_to_dealer)
             ace_handler_dealer(sum(dealer_hand),dealer_hand)
 
-        print(f"Dealer's hand: {dealer_hand}")
-
         player_hand = []
         first_random_card_for_player = random.choice(cards)
         second_random_card_for_player = random.choice(cards)
@@ -69,18 +67,23 @@ while to_play:
                 wants_to_add = False
 
         if sum(dealer_hand) > 21:
+            print(f"Dealer's hand: {dealer_hand}")
             print("Player wins the game!")
             return
         if sum(player_hand) > 21:
+            print(f"Dealer's hand: {dealer_hand}")
             print("Dealer wins the game!")
             return
         if sum(player_hand) > sum(dealer_hand):
+            print(f"Dealer's hand: {dealer_hand}")
             print("Player wins the game!")
             return
         if sum(dealer_hand) > sum(player_hand):
+            print(f"Dealer's hand: {dealer_hand}")
             print("Dealer wins the game!")
             return
         if sum(dealer_hand) == sum(player_hand):
+            print(f"Dealer's hand: {dealer_hand}")
             print("It's a Draw!")
             return
 
